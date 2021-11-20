@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { Stack } from '@chakra-ui/layout'
+import React from 'react'
+import CheckoutPage from './components/CheckoutPage'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Stack bg='#E5E5E5' h='100%' maxHeight='100%'>
+      <CheckoutPage />
+    </Stack>
   );
 }
 
-export default App;
+export default App
