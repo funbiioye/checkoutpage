@@ -17,9 +17,8 @@ import {BiCheckShield} from 'react-icons/bi'
 import { ChevronDownIcon, ChevronRightIcon, ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import logo  from '../images/Logo.svg';
 import peak  from '../images/peak.svg';
-import ShippingMethod from './ShippingMethod'
 
-function CheckoutPage() {
+function ShippingMethod() {
   return (
     <Box  h='100%' w='100%' maxWidth='100vw' mb='525px'>
       <Box bg='#27A599' color='#fff' h='100%' maxHeight='40px' w='100%'   >
@@ -167,6 +166,6 @@ function CheckoutPage() {
   );
 }
 
-export default CheckoutPage
+export default ShippingMethod
 
 

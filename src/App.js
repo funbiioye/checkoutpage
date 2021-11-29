@@ -4,7 +4,7 @@ import CheckoutPage from './components/CheckoutPage'
 
 function App() {
   return (
-    <Stack bg='#E5E5E5' h='100%' maxHeight='100%'>
+    <Stack bg='#E5E5E5' h='100%' w='100vw' maxHeight='100%'>
       <CheckoutPage />
     </Stack>
   );
