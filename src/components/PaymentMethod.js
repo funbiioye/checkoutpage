@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { Center, Text,Flex, Box, Heading, Stack } from '@chakra-ui/layout'
+import { Center, Text,Flex, Box, Heading } from '@chakra-ui/layout'
 import {Icon} from '@chakra-ui/icon'
 import {
   Menu,
@@ -18,10 +18,11 @@ import {BiCheckShield} from 'react-icons/bi'
 import { ChevronDownIcon, ChevronRightIcon, ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import logo  from '../images/Logo.svg';
 import peak  from '../images/peak.svg';
-import star  from '../images/star.svg';
-import { Radio, RadioGroup } from '@chakra-ui/react'
+import visa  from '../images/visa.svg';
+import mastercard  from '../images/mastercard.svg';
 
-function ShippingMethod() {
+
+function PaymentMethod() {
   const history = useHistory();
   return (
     <Box  h='100%' w='100%' maxWidth='100vw' mb='525px'>
@@ -87,15 +88,15 @@ function ShippingMethod() {
         <Flex >
           <Breadcrumb spacing="8px" separator={<ArrowForwardIcon color="gray.500"  />} mt='26px' >
             <BreadcrumbItem color='#27A599'  >
-              <BreadcrumbLink href="/checkout">Billing Address </BreadcrumbLink>
+              <BreadcrumbLink href="#">Billing Address </BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem color='#27A599'  >
-              <BreadcrumbLink href="/shipping">Shipping Method</BreadcrumbLink>
+              <BreadcrumbLink href="#">Shipping Method</BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem color='#27A599'  >
-              <BreadcrumbLink href="/payment">Payment Method</BreadcrumbLink>
+              <BreadcrumbLink href="#">Payment Method</BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
         </Flex>
@@ -112,49 +113,98 @@ function ShippingMethod() {
             Shipping Method
           </Heading>
           <Box  borderTop="1px solid #8F8F8F" >
-            <Box pt='12px' pl='14px' w='611px' h='130px' bg='#fff' boxShadow='0px 4px 16px rgba(194, 194, 194, 0.1)' borderRadius='12px' mt='16px'>
-              <Text color="#27A599" fontSize='14px' fontWeight='600' font='poppins'>ClickNShip</Text>
-              <Flex>
-                <Text color="#27A599" fontSize='14px' fontWeight='600' font='poppins' mt='11px'>Delivery Time:</Text>
-                <Text fontSize='14px' color='#646464' fontWeight='600' font='poppins' ml='24px' mt='11px'> 2 Days-08/10/2021</Text>
-                <Image  src={star} bg='black' w='109px' h='28px' mt='9px' ml='106px' />
-                <RadioGroup defaultValue='2' mt='12px' ml='43px'>
-                  <Stack spacing={5} direction='row'>
-                    <Radio colorScheme='green'  value='1'></Radio>
-                  </Stack>
-                </RadioGroup>
-              </Flex>
-              <Flex>
-                <Text color="#27A599" fontSize='14px' fontWeight='600' font='poppins' mt='11px'> Shipping Fees </Text>
-                <Text color='#646464' fontSize='14px' fontWeight='600' font='poppins' ml='24px' mt='11px'> 600 </Text>
-              </Flex>
-            </Box>
-            <Box pt='12px' pl='14px' mt='28px'  w='611px' h='130px' bg='#fff' boxShadow='0px 4px 16px rgba(194, 194, 194, 0.1)' borderRadius='12px' >
-              <Text color="#27A599" fontSize='14px' fontWeight='600' font='poppins'> Pick Up</Text>
-              <Flex>
-                <Text color='#646464' fontSize='14px' fontWeight='600' font='poppins' mt='11px'> (No Shipping Fee)</Text>
-                {/* <input type="radio" value="Male" color='#27A599' />  */}
-                <RadioGroup defaultValue='1' mt='12px' ml='377px' >
-                  <Stack spacing={5} direction='row'>
-                    <Radio colorScheme='green'  value='2'></Radio>
-                  </Stack>
-                </RadioGroup>
-              </Flex>
-            </Box>
-            <Button
-              h="48px"
-              w="609px"
-              bg="#FF9F1C"
-              boxSizing="border-box"
-              borderRadius="30px"
-              border="1px solid #FF9F1C"
-              boxShadow="0px 4px 4px rgba(194, 194, 194, 0.3)"
-              color="#fff"
-              mt="108px"
-              onClick={()=> history.push("/payment")}
-            >
-              confirm
-            </Button>
+            <Flex mt= '17px'>
+                <Box border='1px solid #B9B9B9' p='auto' w='123px' h='50px' align='center' p='4'>
+                    <Image src={visa} />
+                </Box>
+                <Box border='1px solid #B9B9B9' ml='21px' p='auto' w='123px' h='50px' align='center' p='1'>
+                    <Image src={mastercard} />
+                </Box>
+            </Flex>
+            <Text mt="32px" mb="16px" color="#646464">
+            {" "}
+            Card Name
+            </Text>
+            <Input
+            bg="#fff"
+            boxSizing="border-box"
+            borderRadius="30px"
+            border="1px solid #F5F5F5"
+            boxShadow="0px 2px 5px rgba(39, 165, 153, 0.08)"
+            color="#646464"
+            h='48px'
+            />
+              <Text mt="32px" mb="16px" color="#646464">
+            {" "}
+            Card Number
+            </Text>
+            <Input
+            bg="#fff"
+            boxSizing="border-box"
+            borderRadius="30px"
+            border="1px solid #F5F5F5"
+            boxShadow="0px 2px 5px rgba(39, 165, 153, 0.08)"
+            color="#646464"
+            h='48px'
+           
+            />
+             <Flex>
+                <Box mt="32px">
+                    <Text color="#646464" mb="16px">
+                        Expiry Date
+                    </Text>
+                    <Input
+                        bg="#fff"
+                        boxSizing="border-box"
+                        borderRadius="30px"
+                        border="1px solid #F5F5F5"
+                        boxShadow="0px 2px 5px rgba(39, 165, 153, 0.08)"
+                        color="#646464"
+                        w='194'
+                    />
+                    </Box>
+                    <Box mt="32px" ml="28px">
+                    <Text color="#646464" mb="16px" ml='30px'>
+                        CVV
+                    </Text>
+                    <Input
+                        bg="#fff"
+                        boxSizing="border-box"
+                        borderRadius="30px"
+                        border="1px solid #F5F5F5"
+                        boxShadow="0px 2px 5px rgba(39, 165, 153, 0.08)"
+                        color="#646464"
+                        ml='30px'
+                        w='194'
+                    />
+                </Box>
+            </Flex>
+            <Flex>
+                <Button
+                bg="#FFF"
+                color="#FF9F1C"
+                borderRadius="30px"
+                mt="47px"
+                mb="22px"
+                pb="2px"
+                w='190px'
+                >
+                Cancel
+                </Button>
+                <Button
+                bg="#FF9F1C"
+                color="#FFF"
+                borderRadius="30px"
+                mt="47px"
+                mb="22px"
+                pb="2px"
+                w='190px'
+                ml='100px'
+                onClick={()=> history.push("/successful")}
+                >
+                confirm
+                </Button>
+            </Flex>
           </Box>
         </Box>
         <Box bg='#27A599' w='400px' h='491px' mr='94px'>
@@ -198,6 +248,6 @@ function ShippingMethod() {
   );
 }
 
-export default ShippingMethod
+export default PaymentMethod
 
 
