@@ -21,17 +21,17 @@ import ShippingMethod from './ShippingMethod'
 
 function CheckoutPage() {
   return (
-    <Box  h='100%' w='100%' maxWidth='100vw' mb='525px'>
+    <Box  h='100%' w='100vw'  mb='525px'>
       <Box bg='#27A599' color='#fff' h='100%' maxHeight='40px' w='100%'   >
-        <Flex w='100%'>
-          <Text ml={['32px','137px']} pt={['5px','12px']} pb={'4px','9px'} fontSize='12px'>Sell on Fuud Fair</Text>
-          <Icon as={BiCheckShield} color='#fff' mt={'10px'} ml={['12px','192px']} mr={'13px'} boxSize={'22px'}/>
+        <Flex w='100vw'>
+          <Text ml={['28px','28px','137px','137px']} pt={['5px','5px','12px','12px']} pb={'4px','4px','9px','9px'} fontSize={['10px','10px','12px','12px']}>Sell on Fuud Fair</Text>
+          <Icon as={BiCheckShield} color='#fff' mt={['5px','5px','10px','10px']} ml={['20px','20px','192px','192px']} mr={'13px'} boxSize={'22px'}/>
           <Text  pt={'12px'} pb={'9px'} fontSize='12px'>100% secure delivery without contacting the courier </Text>
           <Text  pt={'12px'} pb={'9px'} fontSize='12px' ml='16px' mr='13px'> ｜ </Text>
           <Text  pt={'12px'} pb={'9px'} fontSize='12px'> Need help? call us: +23470020045 </Text>
         </Flex>
       </Box>
-      <Box bg='#fff' h='96px' w='100%' >
+      <Box bg='#fff' h='96px' w='100vw' >
         <Flex>
           <Image src={logo} w='114px' h='30px' mt='34px' ml='98px' ></Image>
           <Input  placeholder="Search through our products"  borderColor='#c2c2c2'  borderRadius='30px' w='445px' h='48px' mt='24px' mb='24px' ml='139px'/>
@@ -56,9 +56,9 @@ function CheckoutPage() {
       </Box>
       <Box w='100vw'>
         <Flex >
-          <Icon as={ArrowBackIcon} ml='105px' mt='26px' color='black' />
+          <Icon as={ArrowBackIcon} ml={['28px','28px','105px','105px']} mt='26px' color='black' />
           <Text color='black'    mt='22px' ml='5px' >back</Text>
-          <Breadcrumb spacing="8px" separator={<ChevronRightIcon color="gray.500"  />} mt='26px' ml='390px'>
+          <Breadcrumb spacing="8px" separator={<ChevronRightIcon color="gray.500"  />} mt='26px' ml={['30px','30px','390px','390px']}>
             <BreadcrumbItem color='#27A599'  >
               <BreadcrumbLink href="#">Home</BreadcrumbLink>
             </BreadcrumbItem>
